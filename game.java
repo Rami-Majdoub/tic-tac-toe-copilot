@@ -152,4 +152,19 @@ public class Game {
         Game game = new Game();
         game.play();
     }
+
+    class Keyboard {
+        public static int readInt() {
+            int num = 0;
+            boolean isValid = false;
+            while (!isValid) {
+                try {
+                    num = Integer.parseInt(System.console().readLine());
+                    isValid = true;
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Try again.");
+                }
+            }
+            return num;
+        }
 }
